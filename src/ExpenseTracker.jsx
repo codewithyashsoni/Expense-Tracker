@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { LuTrash2 } from "react-icons/lu"
+import Graphs from "./Graphs.jsx"
 
 function ExpenseTracker(){
     const[transactions, setTransactions] = useState(() => {
@@ -105,6 +106,8 @@ function ExpenseTracker(){
                 <p className="card-value red">₹{totals.expense.toLocaleString("en-IN")}</p>
                 </div>
             </div>
+
+            {transactions.length > 0 && <Graphs transactions={transactions} />}
 
             <form onSubmit={handleAddTransaction}>
                 <div className="form-row row-1">
