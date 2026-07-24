@@ -6,7 +6,7 @@ A modern, responsive **Expense Tracker** built with **React.js** that helps user
 
 ## 🔗 Live Demo
 
-🌐 **Live Website:** https://expense-tracker-yashsoni.vercel.app/
+🌐 **Live Website:** https://expense-tracker-yashsoni.vercel.app
 
 ---
 
