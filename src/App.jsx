@@ -6,7 +6,6 @@ function App() {
   return(
     <ExpenseTracker />
   )
-  
 }
 
 export default App

@@ -61,7 +61,6 @@ function Graphs({transactions}){
         }));
     }
     const pieChartData = calculatePieChartData(transactions);
-    console.log(pieChartData)
 
     function calculateMonthlyData(transactionsArray){
         const monthlyData=[];
