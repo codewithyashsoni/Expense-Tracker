@@ -28,6 +28,7 @@
 }
 html{
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 *{
   margin: 0;
@@ -52,15 +53,16 @@ body{
   color: var(--text-primary);
 }
 .card-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .card{
+  flex: 1 1 250px;
   background-color: var(--surface);
   padding: 1.5rem;
   border: 2px solid var(--border);
-  border-radius: 16px;
+  border-radius: 1rem;
   transition: all 0.25s ease;
   box-shadow: var(--card-shadow);
 }
@@ -89,7 +91,7 @@ form{
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  border-radius: 10px;
+  border-radius: .625rem;
   padding :1.5rem;
   border: 2px solid var(--border);
   box-shadow: var(--shadow);
@@ -106,7 +108,7 @@ form{
   border: 1px solid var(--input-border);
   color: var(--text-secondary);
   padding: 0.7rem;
-  border-radius: 8px;
+  border-radius: .5rem;
 }
 .description:focus, 
 .amount:focus, 
@@ -123,26 +125,25 @@ form{
 }
 .description{
   flex: 3;
-  min-width: 300px;
+  min-width: 18.75rem;
 }
 .amount{
   flex: 1;
-  min-width: 130px;
+  min-width: 8.125rem;
 }
 .transaction-category{
   flex: 1;
-  min-width: 180px;
+  min-width: 11.25rem;
   cursor: pointer;
 }
-
 .transaction-type{
   flex: 1;
-  min-width: 150px;
+  min-width: 9.375rem;
   cursor: pointer;
 }
 .date{
   flex: 1;
-  min-width: 160px;
+  min-width: 10rem;
   cursor: pointer;
 }
 .add-button{
@@ -151,7 +152,7 @@ form{
   color: var(--text-primary);
   padding: 0.7rem;
   flex:1;
-  border-radius: 10px;
+  border-radius: .625rem;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -167,7 +168,7 @@ form{
   background-color: var(--surface);
   border: 2px solid var(--border);
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: .625rem;
   height: 100%;
   box-shadow: var(--shadow);
 }
@@ -189,7 +190,7 @@ form{
   display: flex;
   padding :1rem;
   justify-content: space-between;
-  border-radius: 10px;
+  border-radius: .625rem;
   transition: all .25s ease;
 }
 .transactions-list li:hover{
@@ -270,7 +271,7 @@ form{
   min-width: 0;
   background: var(--surface);
   border: 2px solid var(--border);
-  border-radius: 16px;
+  border-radius: 1rem;
   padding: 1rem;
   box-shadow: var(--shadow);
   transition: all .25s ease;
@@ -296,4 +297,60 @@ form{
   color: var(--text-primary);
   font-size: 0.80rem;
   font-weight: 400;
+}
+
+@media (max-width: 1200px){
+  html{
+    font-size :15.5px;
+  }
+  .container{
+    width: min(95%, 1100px);
+  }
+  .chart-card{
+    flex: 1 1 420px;
+  }
+}
+@media (max-width: 992px){
+  html{
+    font-size: 15px;
+  }
+  .chart-card{
+    flex: 1 1 100%;
+  }
+  .filter-buttons-container{
+    justify-content: center;
+    gap: 0.75rem;
+  }
+}
+@media (max-width: 768px){
+  html{
+    font-size: 14px;
+  }
+  .container{
+    width: 95%;
+    padding: 0.75rem;
+  }
+  form{
+    padding :1.25rem;
+  }
+  .description,
+  .amount,
+  .transaction-category,
+  .transaction-type,
+  .date,
+  .add-button{
+      min-width:100%;
+  }
+}
+@media (max-width: 480px){
+  html{
+    font-size: 13px;
+  }
+  .container{
+    width: 100%;
+    padding: .5rem;
+  }
+  form{
+    padding :1rem;
+  }
 }
