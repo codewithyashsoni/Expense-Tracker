@@ -174,7 +174,8 @@ function ExpenseTracker(){
                             </div>
 
                             <ul className="transactions-list">
-                                {(filter === "All" ? transactions : transactions.filter((transaction) => transaction.category === filter))
+                                {[...(filter === "All" ? transactions : transactions.filter((transaction) => transaction.category === filter))]
+                                .reverse()
                                 .map((transaction) => 
                                 <li key={transaction.id}>
                                     <div className="transaction-left-div">
